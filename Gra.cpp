@@ -12,9 +12,9 @@ void printBoard(const char board[9]) {
 }
 bool checkWin(const char board[9], char player){
     int lines [8][3] = {
-        {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, 
-        {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, 
-        {0, 4, 8}, {2, 4, 6}             
+        {0, 1, 2}, {3, 4, 5}, {6, 7, 8},
+        {0, 3, 6}, {1, 4, 7}, {2, 5, 8},
+        {0, 4, 8}, {2, 4, 6}
     };
     for (int i=0; i<8; i++){
         if (board[lines[i][0]] == player && board[lines[i][1]] == player && board[lines[i][2]] == player)
@@ -33,10 +33,10 @@ int main () {
     char board [9] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
     char currentPlayer = 'X';
     int move;
-    std::cout << "Witaj w grze kółko i krzyżyk!\n";
+    std::cout << "Witaj w grze kolko i krzyzyk!\n";
     std::cout << "Autor: Krystian Paetzke\n";
     std::cout << "Gracz 1: X\nGracz 2: O\n";
-    std::cout << "Aby wykonać ruch, wpisz numer pola (1-9):\n";
+    std::cout << "Aby wykonac ruch, wpisz numer pola (1-9):\n";
     std::cout << "1 | 2 | 3\n4 | 5 | 6\n7 | 8 | 9\n";
     while (true) {
         printBoard(board);
